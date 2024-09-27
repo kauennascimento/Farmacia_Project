@@ -912,10 +912,6 @@ video {
   width: 9rem;
 }
 
-.w-72 {
-  width: 18rem;
-}
-
 .w-\[this-is\\\\\] {
   width: this-is\\;
 }
@@ -1484,10 +1480,6 @@ video {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
 }
 
 .gap-7 {
@@ -2801,10 +2793,6 @@ body {
 @media (min-width: 768px) {
   .md\:min-w-\[600px\] {
     min-width: 600px;
-  }
-
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:grid-cols-4 {

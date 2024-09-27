@@ -583,21 +583,6 @@
     </div>
     <!--FIM DO MENU-->
 
-    <!--EVENTOS-->
-    <section class="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
-        <div class="flex w-72 h-76"><img src="assets/eventos/event01.png" alt="none"></div>
-        <div class="flex w-72 h-76"><img src="assets/eventos/event02.png" alt="none"></div>
-        <div class="flex w-72 h-76"><img src="assets/eventos/event03.png" alt="none"></div>
-        <div class="flex w-72 h-76"><img src="assets/eventos/event04.png" alt="none"></div>
-        <div class="flex w-72 h-76"><img src="assets/eventos/event05.png" alt="none"></div>
-        <div class="flex w-72 h-76"><img src="assets/eventos/event06.png" alt="none"></div>
-        <div class="flex w-72 h-76"><img src="assets/eventos/event07.png" alt="none"></div>
-        <div class="flex w-72 h-76"><img src="assets/eventos/event08.png" alt="none"></div>
-        <div class="flex w-72 h-76"><img src="assets/eventos/event09.png" alt="none"></div>
-        <div class="flex w-72 h-76"><img src="assets/eventos/event10.png" alt="none"></div>
-        <div class="flex w-72 h-76"><img src="assets/eventos/event11.png" alt="none"></div>
-    </section>
-    <!--FIM EVENTOS-->
 
     <!--MODAL CART-->
     <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
@@ -612,6 +597,17 @@
             <input type="text" placeholder="Digite seu Endereço completo..." id="address" class="w-full border-2 p-1 rounded my-1">
             <p class="text-red-500 hidden" id="address-warn">Digite seu Endereço completo!</p>
 
+            <p class="font-bold mt-4">Nome Completo</p>
+            <input type="text" placeholder="Digite seu Nome completo..." id="nome" class="w-full border-2 p-1 rounded my-1">
+            <p class="text-red-500 hidden" id="name-warn">Digite seu Nome completo!</p>
+
+            <p class="font-bold mt-4">Forma de Pagamento</p>
+            <select id="payment-method" class="w-full border-2 p-1 rounded my-1">
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="dinheiro">Dinheiro</option>
+                <option value="pix">Pix</option>
+            </select>
+
             <div class="flex items-center justify-between mt-5 w-full">
                 <button id="close-modal-btn">Fechar</button>
                 <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar Pedido</button>
@@ -619,6 +615,9 @@
         </div>
     </div>
     <!--FIM MODAL CART-->
+
+
+
 
     <!--BUTTON CART FOOTER-->
     <footer class="w-full bg-red-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
@@ -628,6 +627,7 @@
             <i class="fa fa-cart-plus text-lg text-white"></i>
     </footer>
     <!--FIM BUTTON CART FOOTER-->
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="script.js"></script>
 
