@@ -34,6 +34,19 @@ body {
     #cart-modal {
         width: 90%; /* Faz o modal ocupar 90% da largura */
         margin: auto; /* Centraliza o modal */
+        max-height: 80vh; /* Limita a altura do modal para 80% da viewport */
+        overflow-y: auto; /* Ativa rolagem interna no modal */
+    }
+
+    /* Alinhamento dos itens do carrinho à esquerda */
+    #cart-items .cart-item {
+        text-align: left; /* Garante que o texto fique alinhado à esquerda */
+    }
+
+    #cart-items .cart-item div {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
     footer {
@@ -52,5 +65,28 @@ body {
 
     #cart-count {
         margin: 0 5px; /* Ajusta o espaço ao redor do contador */
+    }
+}
+
+/* CSS para telas maiores */
+@media (min-width: 769px) {
+    main {
+        display: flex;
+        flex-direction: row; /* Itens lado a lado */
+        justify-content: space-between; /* Espaça os itens */
+    }
+
+    img {
+        width: auto; /* Imagens com largura automática */
+        max-width: 300px; /* Maior tamanho para telas grandes */
+    }
+
+    footer {
+        justify-content: space-between; /* Espaça os itens no footer */
+        padding: 20px; /* Adiciona preenchimento ao footer */
+    }
+
+    #cart-modal {
+        width: 50%; /* O modal ocupará 50% da largura em telas maiores */
     }
 }

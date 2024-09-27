@@ -900,6 +900,10 @@ video {
   height: 100%;
 }
 
+.max-h-\[80vh\] {
+  max-height: 80vh;
+}
+
 .w-28 {
   width: 7rem;
 }
@@ -1960,6 +1964,11 @@ video {
   background-color: rgb(0 0 0 / 0.6);
 }
 
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
@@ -2756,35 +2765,81 @@ body {
     /* Faz o modal ocupar 90% da largura */
     margin: auto;
     /* Centraliza o modal */
+    max-height: 80vh;
+    /* Limita a altura do modal para 80% da viewport */
+    overflow-y: auto;
+    /* Ativa rolagem interna no modal */
+  }
+
+  /* Alinhamento dos itens do carrinho à esquerda */
+
+  #cart-items .cart-item {
+    text-align: left;
+    /* Garante que o texto fique alinhado à esquerda */
+  }
+
+  #cart-items .cart-item div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   footer {
-    display: flex;
-    /* Certifica que o footer é flex */
-    flex-direction: column;
-    /* Organiza o footer em coluna */
-    align-items: center;
-    /* Centraliza os itens do footer */
-    padding: 10px;
-    /* Padding adicional no footer */
+    padding: 0;
+    /* Remove o preenchimento no footer */
+    margin: 0;
+    /* Remove o espaço fora do footer */
+    flex-direction: row;
+    /* Alinha os itens na horizontal */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
   }
 
   #cart-btn {
+    margin: 0;
+    /* Remove a margem do botão do carrinho */
+    padding: 0;
+    /* Remove o padding se necessário */
     display: flex;
-    /* Mantém o botão como um flex container */
+    /* Usa flex para alinhar os itens no botão */
     align-items: center;
-    /* Centraliza o texto e ícone */
-    margin-top: 10px;
-    /* Margem superior no botão do carrinho */
+    /* Centraliza verticalmente */
   }
 
-  input[type="text"], select {
-    width: 100%;
-    /* Faz os campos de entrada ocuparem 100% da largura */
-    padding: 10px;
-    /* Adiciona padding nos campos de entrada */
-    margin-top: 5px;
-    /* Margem superior */
+  #cart-count {
+    margin: 0 5px;
+    /* Ajusta o espaço ao redor do contador */
+  }
+}
+
+/* CSS para telas maiores */
+
+@media (min-width: 769px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    /* Itens lado a lado */
+    justify-content: space-between;
+    /* Espaça os itens */
+  }
+
+  img {
+    width: auto;
+    /* Imagens com largura automática */
+    max-width: 300px;
+    /* Maior tamanho para telas grandes */
+  }
+
+  footer {
+    justify-content: space-between;
+    /* Espaça os itens no footer */
+    padding: 20px;
+    /* Adiciona preenchimento ao footer */
+  }
+
+  #cart-modal {
+    width: 50%;
+    /* O modal ocupará 50% da largura em telas maiores */
   }
 }
 
@@ -2833,6 +2888,11 @@ body {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:bg-gray-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
 .hover\:font-bold:hover {
