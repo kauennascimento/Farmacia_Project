@@ -181,12 +181,24 @@ cartItemsContainer.addEventListener("click", function (event){
                 updateCartModal();
             })
 
-            // Verificar a hora e manipular o card horário
-            function checkRestaurantOpen(){
+            function checkRestaurantOpen() {
                 const data = new Date();
+                const diaSemana = data.getDay(); // 0 (domingo) a 6 (sábado)
                 const hora = data.getHours();
-                return hora >= 16 && hora < 22;
-                //true = restaurante está aberto
+                const minutos = data.getMinutes();
+            
+                // Verifica se é domingo
+                if (diaSemana === 0) {
+                    return hora >= 7 && hora < 12;
+                }
+                // Verifica se é segunda a sábado
+                else if (diaSemana >= 1 && diaSemana <= 6) {
+                    return (hora === 7 && minutos >= 30) || (hora > 7 && hora < 19);
+                }
+                // Caso contrário (horário fora do intervalo)
+                else {
+                    return false;
+                }
             }
 
 
