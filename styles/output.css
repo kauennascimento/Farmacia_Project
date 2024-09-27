@@ -2761,7 +2761,7 @@ body {
   }
 
   #cart-modal {
-    width: 90%;
+    width: 100%;
     /* Faz o modal ocupar 90% da largura */
     margin: auto;
     /* Centraliza o modal */

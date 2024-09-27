@@ -32,7 +32,7 @@ body {
     }
 
     #cart-modal {
-        width: 90%; /* Faz o modal ocupar 90% da largura */
+        width: 100%; /* Faz o modal ocupar 90% da largura */
         margin: auto; /* Centraliza o modal */
         max-height: 80vh; /* Limita a altura do modal para 80% da viewport */
         overflow-y: auto; /* Ativa rolagem interna no modal */
