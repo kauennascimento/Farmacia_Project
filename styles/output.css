@@ -2715,6 +2715,79 @@ body {
   background-color: #f6f7f8;
 }
 
+/* CSS para dispositivos móveis */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    /* Ajusta o tamanho da fonte */
+    padding: 0 10px;
+    /* Padding nas laterais */
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    align-items: center;
+    /* Centraliza os itens */
+  }
+
+  .flex {
+    flex-direction: column;
+    /* Muda a direção do flex para coluna */
+    align-items: center;
+    /* Centraliza itens */
+    margin-bottom: 20px;
+    /* Espaçamento entre produtos */
+  }
+
+  img {
+    width: 100%;
+    /* Faz as imagens ocuparem 100% da largura do container */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    max-width: 200px;
+    /* Limita a largura máxima das imagens */
+  }
+
+  #cart-modal {
+    width: 90%;
+    /* Faz o modal ocupar 90% da largura */
+    margin: auto;
+    /* Centraliza o modal */
+  }
+
+  footer {
+    display: flex;
+    /* Certifica que o footer é flex */
+    flex-direction: column;
+    /* Organiza o footer em coluna */
+    align-items: center;
+    /* Centraliza os itens do footer */
+    padding: 10px;
+    /* Padding adicional no footer */
+  }
+
+  #cart-btn {
+    display: flex;
+    /* Mantém o botão como um flex container */
+    align-items: center;
+    /* Centraliza o texto e ícone */
+    margin-top: 10px;
+    /* Margem superior no botão do carrinho */
+  }
+
+  input[type="text"], select {
+    width: 100%;
+    /* Faz os campos de entrada ocuparem 100% da largura */
+    padding: 10px;
+    /* Adiciona padding nos campos de entrada */
+    margin-top: 5px;
+    /* Margem superior */
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

@@ -138,55 +138,55 @@
                     }
                 })
                 
-            // Finalizar pedido
-            checkoutBtn.addEventListener("click", function() {
-                const isOpen = checkRestaurantOpen();
-                if (!isOpen) {
-                    Toastify({
-                        text: "Ops! o restaurante está fechado no momento",
-                        duration: 3000,
-                        close: true,
-                        gravity: "top",
-                        position: "right",
-                        stopOnFocus: true,
-                        style: {
-                            background: "#ef4444",
-                        },
-                    }).showToast();
-                    return;
-                }
-
-                if (cart.length === 0) return;
-
-                if (addressInput.value === "") {
-                    addressWarn.classList.remove("hidden");
-                    addressInput.classList.add("border-red-500");
-                    return;
-                }
-
-                const customerName = document.getElementById("nome").value; // Obter o nome do cliente
-                if (customerName === "") {
-                    document.getElementById("name-warn").classList.remove("hidden");
-                    document.getElementById("nome").classList.add("border-red-500");
-                    return;
-                } else {
-                    document.getElementById("name-warn").classList.add("hidden");
-                }
-
-                const paymentMethod = document.getElementById("payment-method").value; // Obter o método de pagamento
-
-                const cartItems = cart.map((item) => {
-                    return ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} `;
-                }).join("");
-
-                const message = encodeURIComponent(`Nome: ${customerName}\n | ` + `Endereço: ${addressInput.value}\n | ` + `Método de Pagamento: ${paymentMethod}\n |` + cartItems);
-                const phone = "94321548";
-
-                window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
-
-                cart = [];
-                updateCartModal();
-            });
+                checkoutBtn.addEventListener("click", function() {
+                    const isOpen = checkRestaurantOpen();
+                    if (!isOpen) {
+                        Toastify({
+                            text: "Ops! o restaurante está fechado no momento",
+                            duration: 3000,
+                            close: true,
+                            gravity: "top",
+                            position: "right",
+                            stopOnFocus: true,
+                            style: {
+                                background: "#ef4444",
+                            },
+                        }).showToast();
+                        return;
+                    }
+                
+                    if (cart.length === 0) return;
+                
+                    if (addressInput.value === "") {
+                        addressWarn.classList.remove("hidden");
+                        addressInput.classList.add("border-red-500");
+                        return;
+                    }
+                
+                    const customerName = document.getElementById("nome").value;
+                    if (customerName === "") {
+                        document.getElementById("name-warn").classList.remove("hidden");
+                        document.getElementById("nome").classList.add("border-red-500");
+                        return;
+                    } else {
+                        document.getElementById("name-warn").classList.add("hidden");
+                    }
+                
+                    const paymentMethod = document.getElementById("payment-method").value;
+                
+                    const cartItems = cart.map((item) => {
+                        return `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`; // Remove o espaço antes do preço e adiciona "|"
+                    }).join(" ");
+                
+                    const message = encodeURIComponent(`Nome: ${customerName} | Endereço: ${addressInput.value} | Método de Pagamento: ${paymentMethod} | ${cartItems}`);
+                    const phone = "94321548";
+                
+                    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+                
+                    cart = [];
+                    updateCartModal();
+                });
+                
 
 
                     

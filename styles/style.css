@@ -5,3 +5,52 @@
 body {
     background-color: #f6f7f8;
 }
+
+/* CSS para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+        padding: 0 10px; /* Padding nas laterais */
+    }
+
+    main {
+        display: flex;
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: center;    /* Centraliza os itens */
+    }
+
+    .flex {
+        flex-direction: column; /* Muda a direção do flex para coluna */
+        align-items: center;    /* Centraliza itens */
+        margin-bottom: 20px;    /* Espaçamento entre produtos */
+    }
+
+    img {
+        width: 100%;  /* Faz as imagens ocuparem 100% da largura do container */
+        height: auto;  /* Mantém a proporção da imagem */
+        max-width: 200px; /* Limita a largura máxima das imagens */
+    }
+
+    #cart-modal {
+        width: 90%; /* Faz o modal ocupar 90% da largura */
+        margin: auto; /* Centraliza o modal */
+    }
+
+    footer {
+        padding: 0; /* Remove o preenchimento no footer */
+        margin: 0;  /* Remove o espaço fora do footer */
+        flex-direction: row; /* Alinha os itens na horizontal */
+        justify-content: center; /* Centraliza os itens horizontalmente */
+    }
+
+    #cart-btn {
+        margin: 0; /* Remove a margem do botão do carrinho */
+        padding: 0; /* Remove o padding se necessário */
+        display: flex; /* Usa flex para alinhar os itens no botão */
+        align-items: center; /* Centraliza verticalmente */
+    }
+
+    #cart-count {
+        margin: 0 5px; /* Ajusta o espaço ao redor do contador */
+    }
+}
